@@ -2,3 +2,6 @@
 name = Build
 cmd = npm run gulp build
 tags = when_write
+[[tasks]]
+name = Build_noauto
+cmd = npm run gulp build

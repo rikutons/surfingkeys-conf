@@ -93,6 +93,31 @@ maps.global = [
     callback: actions.scrollToHash,
   },
   {
+    alias: "h",
+    map: "S",
+    category: categories.pageNav,
+    description: "Go back in history",
+  },
+  {
+    alias: "l",
+    map: "D",
+    category: categories.pageNav,
+    description: "Go forward in history",
+  },
+  // not work
+  // {
+  //   alias: "H",
+  //   map: "h",
+  //   category: categories.scroll,
+  //   description: "Scroll left",
+  // },
+  // {
+  //   alias: "L",
+  //   map: "l",
+  //   category: categories.scroll,
+  //   description: "Scroll right",
+  // },
+  {
     alias: "gi",
     category: categories.pageNav,
     description: "Edit current URL with vim editor",

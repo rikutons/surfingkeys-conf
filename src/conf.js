@@ -5,11 +5,12 @@ import searchEngines from "./search-engines.js"
 export default {
   settings: {
     hintAlign: "left",
-    hintCharacters: "qwertasdfgzxcvb",
+    hintCharacters: "qwertyuiopasdfghjklzxcvbnm",
     omnibarSuggestionTimeout: 500,
     richHintsForKeystroke: 1,
-    defaultSearchEngine: "dd",
-    theme,
+    defaultSearchEngine: "g",
+    scrollStepSize: 140,
+    // theme: theme,
   },
 
   keys,
