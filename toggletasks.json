@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    {
+      "cmd": "npm run gulp build",
+      "name": "Build",
+      "tags": "when_write"
+    }
+  ]
+}

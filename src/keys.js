@@ -3,6 +3,7 @@ import api from "./api.js"
 import help from "./help.js"
 import priv from "./conf.priv.js"
 import util from "./util.js"
+import { RUNTIME } from "../Surfingkeys/src/content_scripts/common/runtime.js"
 
 const { categories } = help
 
@@ -175,6 +176,27 @@ maps.global = [
   //   description: "Paste tab",
   //   callback:    () => actions.pasteTab(),
   // },
+  {
+    leader: "<Space>",
+    alias: "l",
+    category: categories.tabs,
+    description: "Go one tab right",
+    callback: async function(){
+      // I need to call this two times to go next. Idk why
+      RUNTIME("nextTab");
+      RUNTIME("nextTab");
+    }
+  },
+  {
+    leader: "<Space>",
+    alias: "h",
+    category: categories.tabs,
+    description: "Go one tab left",
+    callback: async function(){
+      RUNTIME("previousTab");
+      RUNTIME("previousTab");
+    }
+  },
   {
     alias: ";se",
     category: categories.settings,
@@ -611,11 +633,11 @@ maps["github.com"] = [
     callback: () =>
       Clipboard.write(util.getURLPath({ count: 2, domain: true })),
   },
-  {
-    alias: "l",
-    description: "Toggle repo language stats",
-    callback: actions.gh.toggleLangStats,
-  },
+  // {
+  //   alias: "l",
+  //   description: "Toggle repo language stats",
+  //   callback: actions.gh.toggleLangStats,
+  // },
   {
     alias: "D",
     description: "View GoDoc for Project",

@@ -1,0 +1,4 @@
+[[tasks]]
+name = Build
+cmd = npm run gulp build
+tags = when_write
